@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AssignmentModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Assignment">
+          <Key>
+            <PropertyRef Name="A_id" />
+          </Key>
+          <Property Name="A_id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="A_date" Type="varchar" MaxLength="50" />
+          <Property Name="A_time" Type="varchar" MaxLength="50" />
+          <Property Name="A_name" Type="varchar" MaxLength="5000" />
+          <Property Name="A_name_detail" Type="varchar" MaxLength="5000" />
+          <Property Name="A_code" Type="varchar" MaxLength="50" />
+          <Property Name="A_link" Type="varchar" MaxLength="50" />
+          <Property Name="A_sander" Type="varchar" MaxLength="50" />
+          <Property Name="A_assign" Type="varchar" MaxLength="50" />
+          <Property Name="A_target" Type="varchar" MaxLength="50" />
+          <Property Name="A_status" Type="varchar" MaxLength="50" />
+          <Property Name="A_detail" Type="varchar" MaxLength="5000" />
+          <Property Name="U_status" Type="varchar" MaxLength="50" />
+          <Property Name="U_remark" Type="varchar" MaxLength="5000" />
+          <Property Name="U_date1" Type="varchar" MaxLength="50" />
+          <Property Name="U_detail1" Type="varchar" MaxLength="5000" />
+          <Property Name="U_link1" Type="varchar" MaxLength="50" />
+          <Property Name="U_date2" Type="varchar" MaxLength="50" />
+          <Property Name="U_detail2" Type="varchar" MaxLength="5000" />
+          <Property Name="U_link2" Type="varchar" MaxLength="50" />
+          <Property Name="U_date3" Type="varchar" MaxLength="50" />
+          <Property Name="U_detail3" Type="varchar" MaxLength="5000" />
+          <Property Name="U_link3" Type="varchar" MaxLength="50" />
+          <Property Name="C1" Type="varchar" MaxLength="50" />
+          <Property Name="C2" Type="varchar" MaxLength="50" />
+          <Property Name="C3" Type="varchar" MaxLength="50" />
+          <Property Name="C4" Type="varchar" MaxLength="50" />
+          <Property Name="R1" Type="varchar" MaxLength="50" />
+          <Property Name="R2" Type="varchar" MaxLength="50" />
+          <Property Name="R3" Type="varchar" MaxLength="50" />
+          <Property Name="R4" Type="varchar" MaxLength="50" />
+          <Property Name="A_Brand" Type="varchar" MaxLength="50" />
+          <Property Name="Rec1" Type="varchar" MaxLength="10" />
+          <Property Name="Rec2" Type="varchar" MaxLength="10" />
+          <Property Name="Rec3" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Personnel">
+          <Key>
+            <PropertyRef Name="P_id" />
+          </Key>
+          <Property Name="P_id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="P_name" Type="varchar" MaxLength="50" />
+          <Property Name="P_user" Type="varchar" MaxLength="50" />
+          <Property Name="P_pass" Type="varchar" MaxLength="50" />
+          <Property Name="P_status" Type="varchar" MaxLength="50" />
+          <Property Name="P_using" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="AssignmentModelStoreContainer">
+          <EntitySet Name="Assignment" EntityType="Self.Assignment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Personnel" EntityType="Self.Personnel" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AssignmentModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Personnel">
+          <Key>
+            <PropertyRef Name="P_id" />
+          </Key>
+          <Property Name="P_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="P_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="P_user" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="P_pass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="P_status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="P_using" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="AssignmentEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Personnels" EntityType="Self.Personnel" />
+          <EntitySet Name="Assignments" EntityType="AssignmentModel.Assignment" />
+        </EntityContainer>
+        <EntityType Name="Assignment">
+          <Key>
+            <PropertyRef Name="A_id" />
+          </Key>
+          <Property Name="A_id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="A_date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="A_time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="A_name" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="A_name_detail" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="A_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="A_link" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="A_sander" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="A_assign" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="A_target" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="A_status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="A_detail" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="U_status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="U_remark" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="U_date1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="U_detail1" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="U_link1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="U_date2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="U_detail2" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="U_link2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="U_date3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="U_detail3" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <Property Name="U_link3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="C1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="C2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="C3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="C4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="R1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="R2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="R3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="R4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="A_Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Rec1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Rec2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Rec3" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AssignmentModelStoreContainer" CdmEntityContainer="AssignmentEntities">
+          <EntitySetMapping Name="Personnels">
+            <EntityTypeMapping TypeName="AssignmentModel.Personnel">
+              <MappingFragment StoreEntitySet="Personnel">
+                <ScalarProperty Name="P_id" ColumnName="P_id" />
+                <ScalarProperty Name="P_name" ColumnName="P_name" />
+                <ScalarProperty Name="P_user" ColumnName="P_user" />
+                <ScalarProperty Name="P_pass" ColumnName="P_pass" />
+                <ScalarProperty Name="P_status" ColumnName="P_status" />
+                <ScalarProperty Name="P_using" ColumnName="P_using" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Assignments">
+            <EntityTypeMapping TypeName="AssignmentModel.Assignment">
+              <MappingFragment StoreEntitySet="Assignment">
+                <ScalarProperty Name="Rec3" ColumnName="Rec3" />
+                <ScalarProperty Name="Rec2" ColumnName="Rec2" />
+                <ScalarProperty Name="Rec1" ColumnName="Rec1" />
+                <ScalarProperty Name="A_Brand" ColumnName="A_Brand" />
+                <ScalarProperty Name="R4" ColumnName="R4" />
+                <ScalarProperty Name="R3" ColumnName="R3" />
+                <ScalarProperty Name="R2" ColumnName="R2" />
+                <ScalarProperty Name="R1" ColumnName="R1" />
+                <ScalarProperty Name="C4" ColumnName="C4" />
+                <ScalarProperty Name="C3" ColumnName="C3" />
+                <ScalarProperty Name="C2" ColumnName="C2" />
+                <ScalarProperty Name="C1" ColumnName="C1" />
+                <ScalarProperty Name="U_link3" ColumnName="U_link3" />
+                <ScalarProperty Name="U_detail3" ColumnName="U_detail3" />
+                <ScalarProperty Name="U_date3" ColumnName="U_date3" />
+                <ScalarProperty Name="U_link2" ColumnName="U_link2" />
+                <ScalarProperty Name="U_detail2" ColumnName="U_detail2" />
+                <ScalarProperty Name="U_date2" ColumnName="U_date2" />
+                <ScalarProperty Name="U_link1" ColumnName="U_link1" />
+                <ScalarProperty Name="U_detail1" ColumnName="U_detail1" />
+                <ScalarProperty Name="U_date1" ColumnName="U_date1" />
+                <ScalarProperty Name="U_remark" ColumnName="U_remark" />
+                <ScalarProperty Name="U_status" ColumnName="U_status" />
+                <ScalarProperty Name="A_detail" ColumnName="A_detail" />
+                <ScalarProperty Name="A_status" ColumnName="A_status" />
+                <ScalarProperty Name="A_target" ColumnName="A_target" />
+                <ScalarProperty Name="A_assign" ColumnName="A_assign" />
+                <ScalarProperty Name="A_sander" ColumnName="A_sander" />
+                <ScalarProperty Name="A_link" ColumnName="A_link" />
+                <ScalarProperty Name="A_code" ColumnName="A_code" />
+                <ScalarProperty Name="A_name_detail" ColumnName="A_name_detail" />
+                <ScalarProperty Name="A_name" ColumnName="A_name" />
+                <ScalarProperty Name="A_time" ColumnName="A_time" />
+                <ScalarProperty Name="A_date" ColumnName="A_date" />
+                <ScalarProperty Name="A_id" ColumnName="A_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
